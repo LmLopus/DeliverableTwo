@@ -21,22 +21,22 @@ public class Password {
 
 		
 		  if(!s.matches(".*[A-Z].*")) { 
-			 System.out.println("There are no capital letters. Please try again.");  
+			 System.out.println("Error. There are no capital letters. Please try again.");  
 		  	}
 		  else if (!s.matches((".*[a-z].*"))) {  
-			 System.out.println("There are no lowercase letters. Please try again.");}
+			 System.out.println("Error. There are no lowercase letters. Please try again.");}
 		 
 		  else if (!password.contains("!")) {
-				System.out.println("There is no exclamation point (!)");
+				System.out.println("Error. There is no exclamation point (!)");
 			} 
 		  else if (password.length()< 7)
-			System.out.println("There are less than 7 characters. Please try again.");
+			System.out.println("Error. There are less than 7 characters. Please try again.");
 		  
 		  else if (password.length()> 12)
-			System.out.println("There are more than 12. Please try again.");
+			System.out.println("Error. There are more than 12. Please try again.");
 		  
 		else {
-			System.out.println("Thank You!");
+			System.out.println("Password valid and accepted!");
 			
 			
 		}
