@@ -14,33 +14,39 @@ public class Password {
 		System.out.println("One eclamation point. (!)");
 		System.out.print("Password: ");
 
-		String password = scnr.nextLine();
-		scnr.close();
+		String password = "nothing";
+		
 
 		String s = password; // you can have any String here
-
+		String condition = "nothing";
+				
+		while (condition != "met") {
+			s = scnr.nextLine();
 		
 		  if(!s.matches(".*[A-Z].*")) { 
 			 System.out.println("Error. There are no capital letters. Please try again.");  
+			 
 		  	}
 		  else if (!s.matches((".*[a-z].*"))) {  
 			 System.out.println("Error. There are no lowercase letters. Please try again.");}
-		 
-		  else if (!password.contains("!")) {
+		 	 
+		  else if (!s.contains("!")) {
 				System.out.println("Error. There is no exclamation point (!)");
+				
 			} 
-		  else if (password.length()< 7)
+		  else if ((s.length()< 7)) {
 			System.out.println("Error. There are less than 7 characters. Please try again.");
-		  
-		  else if (password.length()> 12)
+		  }
+		  else if ((s.length()> 12)) {
 			System.out.println("Error. There are more than 12. Please try again.");
-		  
+		  }
 		else {
 			System.out.println("Password valid and accepted!");
-			
-			
+				condition = "met";
 		}
-
+		  
+		}
+		scnr.close();
 	}
-
 }
+
