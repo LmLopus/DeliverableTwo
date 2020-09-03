@@ -11,7 +11,7 @@ public class Password {
 		System.out.println("One uppercase letter;");
 		System.out.println("At least 7 characters;");
 		System.out.println("At most 12 characters;");
-		System.out.println("One eclamation point. (!)");
+		System.out.println("One exclamation point. (!)");
 		System.out.print("Password: ");
 
 		String password = "nothing";
